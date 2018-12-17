@@ -1,0 +1,28 @@
+<ul class="list-group">
+    <li class="list-group-item" *ngFor="let product of cart.products">
+        <a (click)="removeItem(product)"><span class="glyphicon glyphicon-remove"></span></a>
+        {{ product.qty }} x {{ product.name }}
+        <span class="badge">{{ product.qty * product.price | number:'1.2-2'}} NIS</span>
+    </li>
+</ul>
+<hr>
+<div>
+    <h4>Total to Pay: {{ total | number:'1.2-2' }} NIS</h4>
+    <a class="btn btn-success " *ngIf="!showPayButton" routerLink="/checkout" >Checkout</a>
+</div>
+<hr>
+<div>
+        Hello {{ customer.fullname }} and welcome back.
+</div>
+
+<div *ngIf="hasLastOrder">
+        Your last order was on {{ lastOrder }}
+</div>
+
+<div *ngIf="isOpenCartFound" class="alert alert-warning" style="margin-top: 10px;" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    You have an open cart from your previous visit. <br>
+    <p>
+    You can <a (click)="restoreCart()">restore your cart</a> and continue shopping.
+    </p>
+</div>

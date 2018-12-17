@@ -1,0 +1,83 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-9">
+      <h3>Checkout</h3>
+      <form method="get" (submit)="checkout($event)">
+          <div class="panel panel-default">
+              <div class="panel-heading">Delivery and Payment Details</div>
+              <div class="panel-body" style="padding: 15px;"> 
+  
+                  <div class="form-group">
+                      <label for="address" class="cols-sm-2 control-label">Customer Details</label>
+                      <div class="cols-sm-10">
+                        <div class="input-group">
+                            <span class="light">Delivery will be sent to</span> {{ customer.fullname }} <span class="light">at the following address:</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="address" class="cols-sm-2 control-label">Address</label>
+                        <div class="cols-sm-10">
+                          <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-home" aria-hidden="true"></i></span>
+                            <input type="text" class="form-control" id="address" placeholder="Enter your address" maxlength="30" >
+                          </div>
+                        </div>
+                      </div>
+  
+  
+                    <div class="form-group">
+                        <label for="city" class="cols-sm-2 control-label">City</label>
+                        <div class="cols-sm-10">
+                          <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-globe" aria-hidden="true"></i></span>
+                            <select class="form-control" id="city">
+                                <option>Select a city</option>
+                                <option>London</option>
+                                <option>Tel Aviv</option>
+                                <option>Kazakhstan</option>
+                                <option>Patchuli</option>
+                              </select>
+                          </div>
+                        </div>
+                      </div>   
+
+                      <div class="form-group">
+                          <label for="deliveyTime" class="cols-sm-2 control-label">Delivery Time</label>
+                          <div class="cols-sm-10">
+                            <div class="input-group">
+                              <span class="input-group-addon"><i class="glyphicon glyphicon-time" aria-hidden="true"></i></span>
+                              <select class="form-control" id="deliveryTime">
+                                  <option>08:00 - 13:00</option>
+                                  <option>13:00 - 19:00</option>
+                                  <option>19:00 - 22:00</option>
+                                </select>
+                            </div>
+                          </div>
+                        </div>
+                      
+                      <div class="form-group">
+                          <label for="name" class="cols-sm-2 control-label">Credit Card</label>
+                          <div class="cols-sm-10">
+                            <div class="input-group">
+                              <span class="input-group-addon"><i class="glyphicon glyphicon-credit-card" aria-hidden="true"></i></span>
+                              <input type="text" class="form-control" id="ccNumber" placeholder="Enter credit card number" maxlength="16" >
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="form-group ">
+                            <button type="submit" class="btn btn-success btn-lg btn-block login-button" >Confirm Order</button>
+                            Not ready yet? <a routerLink="/cart">Continue Shopping</a>
+                        </div> 
+
+              </div>
+          </div>
+      </form>
+    </div>
+    <div class="col-md-3 py-5">
+      <h3>Cart Summary</h3>
+      <app-cart></app-cart></div>
+  </div>
+</div>

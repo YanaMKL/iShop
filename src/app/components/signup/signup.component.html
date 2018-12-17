@@ -1,0 +1,104 @@
+<form method="get" (submit)="signUp($event)">
+<div class="container">
+  <div class="row">
+    <div class="col-md-5">
+        <div class="panel panel-default">
+            <div class="panel-heading">Login Details</div>
+            <div class="panel-body" style="padding: 15px;">
+      
+                  <div class="form-group">
+                      <label for="email" class="cols-sm-2 control-label">Email</label>
+                      <div class="cols-sm-10">
+                        <div class="input-group">
+                          <span class="input-group-addon"><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i></span>
+                          <input type="text" class="form-control" id="email" placeholder="Enter your Email Address" maxlength="30" >
+                        </div>
+                      </div>
+                  </div>
+      
+                  <div class="form-group">
+                      <label for="password" class="cols-sm-2 control-label">Password</label>
+                      <div class="cols-sm-10">
+                        <div class="input-group">
+                          <span class="input-group-addon"><i class="glyphicon glyphicon-lock" aria-hidden="true"></i></span>
+                          <input type="password" class="form-control" id="password" placeholder="Enter a Password" maxlength="30" >
+                        </div>
+                      </div>
+                  </div>
+      
+                  <div class="form-group">
+                      <label for="passwordConfirm" class="cols-sm-2 control-label">Confirm Password</label>
+                      <div class="cols-sm-10">
+                        <div class="input-group">
+                          <span class="input-group-addon"><i class="glyphicon glyphicon-lock" aria-hidden="true"></i></span>
+                          <input type="password" class="form-control" id="passwordConfirm"  placeholder="Enter a Password (again)" maxlength="30" >
+                        </div>
+                      </div>
+                  </div>
+      
+            </div>
+          </div>
+    </div>
+    <div class="col-md-5">
+        
+        
+            
+        <div class="panel panel-default">
+            <div class="panel-heading">Delivery Details</div>
+            <div class="panel-body">
+
+
+                <div class="form-group">
+                    <label for="name" class="cols-sm-2 control-label">Full Name</label>
+                    <div class="cols-sm-10">
+                      <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user" aria-hidden="true"></i></span>
+                        <input type="text" class="form-control" id="name" placeholder="Enter your Name" maxlength="30" >
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <div class="form-group">
+                      <label for="address" class="cols-sm-2 control-label">Address <span class="light">(optional)</span></label>
+                      <div class="cols-sm-10">
+                        <div class="input-group">
+                          <span class="input-group-addon"><i class="glyphicon glyphicon-user" aria-hidden="true"></i></span>
+                          <input type="text" class="form-control" id="address" placeholder="Enter your address" maxlength="30" >
+                        </div>
+                      </div>
+                    </div>
+
+
+                  <div class="form-group">
+                      <label for="city" class="cols-sm-2 control-label">City <span class="light">(optional)</span></label>
+                      <div class="cols-sm-10">
+                        <div class="input-group">
+                          <span class="input-group-addon"><i class="glyphicon glyphicon-globe" aria-hidden="true"></i></span>
+                          <select class="form-control" id="city">
+                              <option>Select a city</option>
+                              <option>London</option>
+                              <option>Tel Aviv</option>
+                              <option>Kazakhstan</option>
+                              <option>Patchuli</option>
+                            </select>
+                        </div>
+                      </div>
+                    </div>
+
+            </div>
+          </div>
+        
+    </div>
+  </div>
+  <div class="row">
+      <div class="col-md-7"></div>
+      <div class="col-md-3">
+          <div class="form-group ">
+              <button type="submit" class="btn btn-primary btn-lg btn-block login-button" >Sign Up</button>
+              <a routerLink="/">Cancel</a>
+          </div>    
+      </div>
+    </div>
+</div>
+</form>

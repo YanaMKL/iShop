@@ -1,0 +1,8 @@
+<div class="thumbnail">
+    <img [src]="product.image_name" width="400" alt="...">
+    <div class="caption">
+        <h4>{{ product.name }}</h4>
+        <p><label>Price</label>: <strong>{{ product.price | number:'1.2-2' }} NIS</strong></p>
+        <p style="text-algin: right"><a class="btn btn-default" role="button" (click)="addToCart(product)">Add to Cart</a></p>
+    </div>
+</div>

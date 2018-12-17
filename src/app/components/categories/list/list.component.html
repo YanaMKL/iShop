@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-3">
+      <h3>Categories</h3>
+      <hr>
+      <p>Search for products or browse our categories below.</p>
+      <div class="input-group">
+          <input type="text" class="form-control" [(ngModel)]="keyword" placeholder="Search for...">
+          <span class="input-group-btn ">
+            <button class="btn btn-default" type="button" (click)="search()">Go!</button>
+          </span>
+        </div>
+      <hr>
+      <ul class="nav nav-pills nav-stacked">
+          <li role="presentation" *ngFor="let category of categories"><a (click)="getProducts(category.id)">{{category.name}}</a></li>
+      </ul>
+    </div>
+    <div class="col-md-6">
+      <h3>{{ category.name }} Products</h3>
+      <ol>
+          <app-products *ngFor="let product of products" [product]="product" (OnAddToCart)="addToCart($event)" ></app-products>
+      </ol>
+    </div>
+    <div>
+        <div class="col-md-3">
+          <h3>Your Cart</h3>
+          <app-cart></app-cart> 
+        </div>
+    </div>
+  </div>
+</div>

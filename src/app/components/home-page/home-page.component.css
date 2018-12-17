@@ -1,0 +1,22 @@
+.why_us {
+    padding: 20px;
+    border-bottom: dashed 1px lightgray;
+}
+
+.why_icon {
+    float:left; 
+    width:10%; 
+    height: 50px; 
+    font-size: 28px;
+    text-align: right;
+    padding: 10px;
+    color: #434444;
+}
+
+.why_text {
+    float:left; 
+    width: 90%;
+    min-height:50px; 
+    vertical-align: top;
+    padding: 10px 15px;
+}
